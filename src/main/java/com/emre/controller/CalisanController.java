@@ -24,11 +24,22 @@ public class CalisanController {
     private CalisanSil calisanSil;
 
 
-    @PutMapping("/post")
-    public void CalisanGuncelle(Integer idNo, String ad, String soyad, String unvan, Integer sicil_NO) {
 
-        calisanGuncelle.CalisanGuncelle(idNo,ad,soyad,unvan,sicil_NO);
+    @PutMapping("/guncelle")
+    public void calisanGuncelle(@RequestBody Calisan requestModel) {
+        Integer idNo = requestModel.getIdNo();
+        String ad = requestModel.getAd();
+        String soyad = requestModel.getSoyad();
+        String unvan = requestModel.getUnvan();
+        Integer sicilNo = requestModel.getSICIL_NO();
+
+        calisanGuncelle.CalisanGuncelle(idNo, ad, soyad, unvan, sicilNo);
     }
+
+
+
+
+
 
 
     @GetMapping("/calisan")

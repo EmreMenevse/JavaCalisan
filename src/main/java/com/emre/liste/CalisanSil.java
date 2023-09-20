@@ -28,8 +28,6 @@ public class CalisanSil {
             System.out.println(e);
         }
 
-
     }
-
 
 }

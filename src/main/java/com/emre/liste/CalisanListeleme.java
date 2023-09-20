@@ -34,7 +34,7 @@ public class CalisanListeleme {
                 int Sicil_no = cursor.getInt(5);
 
                 Calisan calisan1 = new Calisan();
-                calisan1.setIdNo(id);
+                calisan1.setIdNo((int) id);
                 calisan1.setAd(Ad);
                 calisan1.setSoyad(Soyad);
                 calisan1.setUnvan(Unvan);

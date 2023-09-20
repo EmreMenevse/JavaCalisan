@@ -10,11 +10,22 @@ public class Calisan {
     @Id
     @Column(name = "IdNo")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long IdNo;
+    private Integer IdNo;
     private String Ad;
     private String Soyad;
     private String Unvan;
     private int SICIL_NO;
+
+    //-------------------------------
+    private Integer idNo;
+    private String ad;
+    private String soyad;
+    private String unvan;
+    private Integer sicilNo;
+
+
+
+
 
 
     /*
@@ -26,11 +37,11 @@ public class Calisan {
     }
 */
 
-    public Long getIdNo() {
+    public Integer getIdNo() {
         return IdNo;
     }
 
-    public void setIdNo(Long idNo) {
+    public void setIdNo(Integer idNo) {
         IdNo = idNo;
     }
 
@@ -65,6 +76,7 @@ public class Calisan {
     public void setSICIL_NO(int sICIL_NO) {
         SICIL_NO = sICIL_NO;
     }
+
 
 
 }
