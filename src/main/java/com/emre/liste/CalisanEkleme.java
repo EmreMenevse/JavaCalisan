@@ -2,6 +2,7 @@ package com.emre.liste;
 
 import com.emre.entity.Calisan;
 import oracle.jdbc.OracleTypes;
+import org.springframework.stereotype.Component;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -10,6 +11,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+
+@Component
 public class CalisanEkleme {
 
 
@@ -46,6 +50,8 @@ public class CalisanEkleme {
 
         return calisanList;
     }
-
-
 }
+
+
+ */
+

@@ -1,12 +1,13 @@
 package com.emre.controller;
+
+import com.emre.liste.CalisanGuncelle;
 import com.emre.liste.CalisanListeleme;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.emre.liste.CalisanSil;
+import org.springframework.web.bind.annotation.*;
 import com.emre.entity.Calisan;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.List;
 
+import java.util.List;
 
 
 @CrossOrigin(maxAge = 3600) // REACTTA CORS POLİCY HATASINI ÇÖZMEK İÇİN KULLANDIK
@@ -14,10 +15,32 @@ import java.util.List;
 public class CalisanController {
 
     @Autowired
-    private CalisanListeleme calisanListeleme; // Assuming CalisanListeleme is a Spring-managed bean
+    private CalisanListeleme calisanListeleme;
 
-    @GetMapping("/calisanlar")
+    @Autowired
+    private CalisanGuncelle calisanGuncelle;
+
+    @Autowired
+    private CalisanSil calisanSil;
+
+
+    @PutMapping("/post")
+    public void CalisanGuncelle(Integer idNo, String ad, String soyad, String unvan, Integer sicil_NO) {
+
+        calisanGuncelle.CalisanGuncelle(idNo,ad,soyad,unvan,sicil_NO);
+    }
+
+
+    @GetMapping("/calisan")
     public List<Calisan> getCalisanlar() {
         return calisanListeleme.getCalisanList();
     }
+
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public void deleteKisi(@PathVariable Integer id) {
+
+        calisanSil.CalisanSil(id);
+    }
+
 }

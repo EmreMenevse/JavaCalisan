@@ -1,14 +1,14 @@
 package com.emre.service;
 
 import com.emre.entity.Calisan;
-import com.emre.repository.CalisanRepository;
+//import com.emre.repository.CalisanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.List;
 
-
+/*
 @Component
 public class CalisanService {
 
@@ -42,3 +42,6 @@ public class CalisanService {
 
     }
 }
+
+
+ */
